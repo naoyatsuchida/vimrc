@@ -94,21 +94,25 @@ set number
 set clipboard=unnamed,autoselect
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+" Shift+hで行先頭ジャンプ
+noremap H ^
+" Shift+lで行末ジャンプ
+noremap L $
 " シンタックスハイライト
 syntax on
 " すべての数を10進数として扱う
 set nrformats=
 inoremap jj <ESC>
-
+"自動でインデントを調節してくれる
+set autoindent
 " 行をまたいで移動
 set whichwrap=b,s,h,l,<,>,[,],~
 " バッファスクロール
 set mouse=a
-
 " auto reload .vimrc
 augroup source-vimrc
   autocmd!
-  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=markeR
   autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
 
