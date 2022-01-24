@@ -37,7 +37,6 @@ inoremap <C-l> <Right>
 "----------------------------------------
 " 表示設定
 "----------------------------------------
-let &t_ti.="\e[5 q" "カーソルの形状を変更
 " エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells
 " Windowsでパスの区切り文字をスラッシュで扱う
@@ -98,6 +97,11 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 noremap H ^
 " Shift+lで行末ジャンプ
 noremap L $
+" ウインドウを横、縦、閉じる
+nnoremap ss <C-w>s
+nnoremap sv <C-w>v
+nnoremap sq <C-w>q
+
 " シンタックスハイライト
 syntax on
 " すべての数を10進数として扱う
