@@ -97,6 +97,11 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 noremap H ^
 " Shift+lで行末ジャンプ
 noremap L $
+" Ctrl+hで行先頭ジャンプ
+nnoremap <C-h> ^
+" Ctrl+lで行末ジャンプ
+nnoremap <C-l> $
+
 " ウインドウを横、縦、閉じる
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
