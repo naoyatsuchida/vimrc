@@ -93,10 +93,6 @@ set number
 set clipboard=unnamed,autoselect
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
-" Shift+hで行先頭ジャンプ
-nnoremap <C-h> ^
-" Ctrl+lで行末ジャンプ
-nnoremap <C-l> $
 
 " ウインドウを横、縦、閉じる
 nnoremap ss <C-w>s
@@ -147,3 +143,8 @@ if has("autocmd")
     \ endif
   augroup END
 endif
+" Alt + →: 右のタブに移動
+nnoremap <A-Right> :tabnext<CR>
+
+" Alt + ←: 左のタブに移動
+nnoremap <A-Left> :tabprev<CR>
